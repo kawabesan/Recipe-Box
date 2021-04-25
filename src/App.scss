@@ -1,0 +1,81 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+$main-color: #a87a50;
+
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f2eb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  .container {
+    .add-box {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px;
+      background-color: $main-color;
+      box-shadow: 2px 2px 8px #d1c0b3;
+  
+      .hTitle {
+        margin: auto 0;
+        padding: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: left;
+
+      }
+    }
+  }
+
+
+  .get-box {
+    max-width: 600px;
+    margin: 50px auto;
+
+    @include tab {
+      margin: 30px 10px;
+    }
+    .get-title {
+      background-color: $main-color;
+      font-weight: normal;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px #d1c0b3;
+      text-align: left;
+    }
+
+  }
+  .rh1-s {
+    background-color: #fff;
+    color: #666;
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 300px;
+    font-family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif";
+    border: none;
+  }
+}
+
+
+
