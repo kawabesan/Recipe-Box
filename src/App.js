@@ -242,7 +242,7 @@ function App() {
               className={classes.rtForm}
             />
             <label for="recipes" className={classes.rLabel}>
-              Resipe
+              Recipe
             </label>
             <textarea
               wrap="soft"
